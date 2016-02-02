@@ -3,7 +3,7 @@
 return array
 (
 	'photo' => array(
-		'alias' => 'kubikrubik-photo',
+		'alias' => 'greor-photo',
 		'name' => 'Photo module',
 		'type' => Helper_Module::MODULE_SINGLE,
 		'controller' => 'photo_album'
