@@ -24,27 +24,12 @@
 			'id' => $orm->id,
 			'query' => Helper_Page::make_query_string($query_array),
 		));
-		
-		$_link = Route::url('preview', array(
-			'directory' => 'modules',
-			'controller' => 'photo',
-			'query' => Helper_Page::make_query_string(array(
-				'id' => $orm->id,
-				'token' => Route::get_preview_token($orm->id)
-			))
-		), NULL, $SITE['code']);
-		$preview_link = HTML::anchor($_link, __('Preview link'), array(
-			'class' => 'item-preview-link',
-			'target' => '_blank'
-		));
 	} else {
 		$action = Route::url('modules', array(
 			'controller' => $CONTROLLER_NAME['element'],
 			'action' => 'edit',
 			'query' => Helper_Page::make_query_string($query_array),
 		));
-		
-		$preview_link = '';
 	}
 	
 	echo View_Admin::factory('layout/error')
@@ -71,7 +56,6 @@
 						'helper_orm' => $helper_orm,
 						'errors' => $errors,
 						'albums_list' => $albums_list,
-						'preview_link' => $preview_link,
 					)); 
 ?>
 				</div>

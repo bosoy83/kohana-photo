@@ -40,7 +40,7 @@
 		'controls' => Form::input('title', $orm->title, array(
 			'id' => 'title_field',
 			'class' => 'input-xxlarge',
-		)),
+		)).$preview_link,
 	));
 	
 /**** uri ****/
